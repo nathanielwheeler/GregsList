@@ -55,7 +55,15 @@ export default class JobService {
                 console.error(err)
             })
     }
-
+    deleteJob(id) {
+        _jobApi.delete(id)
+            .then(res => {
+                // FIXME Delete Statement
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }
 
 
 
