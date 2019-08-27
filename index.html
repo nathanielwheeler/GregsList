@@ -11,16 +11,61 @@
 </head>
 
 <body class="bg-dark text-light">
-    <div class="container-fluid">
-        <header class="row">
+
+    <div class="container">
+        <div class="row">
             <div class="col-12">
                 <h1>Gregs-List*</h1>
                 <p>
                     <sm>*No relation to Craig</sm>
                 </p>
             </div>
-        </header>
-        <main class="row">
+        </div>
+
+        <div class="row">
+            <h2 class="col-12 text-center">¡Jobs!</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form onsubmit="app.controllers.jobCtrl.addJob(event)">
+                    <div class="row">
+
+                        <div class="form-group"><label for="company">Company</label><input
+                                placeholder="Plardletarf Industries" type="text" class="form-control" required
+                                name="company" id="company"></div>
+                        <div class="form-group"><label for="jobTitle">Job Title</label><input type="text"
+                                placeholder="Schmurg Coordinator" class="form-control" required name="jobTitle"
+                                id="jobTitle"></div>
+
+                        <div class="form-group"><label for="hours">Hours</label><input type="number" placeholder="64"
+                                class="form-control" required name="hours" id="hours"></div>
+                        <div class="form-group"><label for="rate">Rate</label><input type="number" placeholder="32"
+                                class="form-control" required name="rate" id="rate"></div>
+                        <div class="form-group"><label for="description">Description</label><textarea type="text"
+                                class="form-control" required name="description" id="description"></textarea></div>
+
+
+                    </div>
+                    <div class="row d-flex justify-content-around">
+                        <button type="submit" class="btn btn-lg btn-block btn-success">Add Job</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <h3>Available Jobs</h3>
+                <br>
+                <div id="jobs-cards" class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="space"></div>
+        <div class="row">
             <div class="col-12">
                 <form class="d-flex" onsubmit='app.controllers.carCtrl.addCar(event)'>
                     <div class="form-group">
@@ -58,7 +103,7 @@
 
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 
 
