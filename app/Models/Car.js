@@ -13,7 +13,7 @@ export default class Car {
     get Template() {
         return `
         <div class="col-3">
-            <div class="card">
+            <div class="card bg-dark">
                 <img class="card-img-top" src="${this.imgUrl}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">${this.year} - ${this.make} - ${this.model}</h5>
