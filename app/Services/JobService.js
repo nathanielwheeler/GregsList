@@ -35,8 +35,8 @@ export default class JobService {
 
     getApiJobs() {
         _jobApi.get()
-            .then(rest => {
-                let jobsData = rest.data.data.map(j => new Job(j))
+            .then(res => {
+                let jobsData = res.data.data.map(j => new Job(j))
                 _setState('jobs', jobsData)
             })
             .catch(err => {
@@ -48,8 +48,8 @@ export default class JobService {
         // A post request, URLExtension and object data as input.
         _jobApi.post('', data)
             .then(res => {
-                _state.jobs.push(res.data.data)
-                _setState('cars', _state.cars)
+                _state.jobs.push(new Job(res.data.data))
+                _setState('jobs', _state.jobs)
             })
             .catch(err => {
                 console.error(err)
@@ -58,7 +58,9 @@ export default class JobService {
     deleteJob(id) {
         _jobApi.delete(id)
             .then(res => {
-                // FIXME Delete Statement
+                let index = _state.jobs.findIndex(job => job._id == id)
+                _state.jobs.splice(index, 1)
+                _setState('jobs', _state.jobs)
             })
             .catch(err => {
                 console.error(err)

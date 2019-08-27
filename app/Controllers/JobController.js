@@ -23,7 +23,7 @@ export default class JobController {
         e.preventDefault()
         let form = e.target
         let data = {
-            company: form.campany.value,
+            company: form.company.value,
             jobTitle: form.jobTitle.value,
             hours: form.hours.value,
             rate: form.rate.value,
