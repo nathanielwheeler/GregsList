@@ -6,7 +6,7 @@ let _js = new JobService()
 function _draw() {
     let jobs = _js.Jobs
     let template = ''
-    jobs.forEach(j => template == j.Template)
+    jobs.forEach(j => template += j.Template)
     document.getElementById('jobs-cards').innerHTML = template
 }
 

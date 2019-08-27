@@ -12,7 +12,7 @@ export default class Car {
 
     get Template() {
         return `
-        <div class="col-3">
+        <div class="col-6 col-xl-4">
             <div class="card bg-dark">
                 <img class="card-img-top" src="${this.imgUrl}" alt="Card image cap">
                 <div class="card-body">
