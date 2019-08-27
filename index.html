@@ -21,6 +21,27 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="container border-light">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="row text-center">¡Houses!</h2>
+                <form onsubmit="app.controllers.houseCtrl.addHouse(event)">
+                    <!-- TODO: Add form elements -->
+                </form>
+            </div>
+        </div>
+        <div class="row" id="houses">
+
+        </div>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="container border-light">
 
         <div class="row">
             <h2 class="col-12 text-center">¡Jobs!</h2>
@@ -56,17 +77,22 @@
 
         <div class="row">
             <div class="col-12">
-                <h3>Available Jobs</h3>
+                <h3 class="text-center">Available Jobs</h3>
                 <br>
                 <div id="jobs-cards" class="row">
 
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="space"></div>
+    <div class="space"></div>
+
+    <div class="container border-light">
+
         <div class="row">
             <div class="col-12">
+                <h2 class="text-center">¡Cars!</h2>
                 <form class="d-flex" onsubmit='app.controllers.carCtrl.addCar(event)'>
                     <div class="form-group">
                         <label for="make">Make</label>
@@ -97,7 +123,7 @@
                 </form>
             </div>
             <div class="col-12">
-                <h3>Available Cars</h3>
+                <h3 class="text-center">Available Cars</h3>
                 <hr>
                 <div class="row" id="cars-cards">
 

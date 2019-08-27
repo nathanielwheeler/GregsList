@@ -1,3 +1,6 @@
 .space {
-    height: 20vh;
+    height: 10vh;
+}
+.border-light {
+    border: 1px solid white;
 }

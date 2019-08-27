@@ -1,4 +1,3 @@
-import Car from "../Models/Job.js"
 import Job from "../Models/Job.js";
 
 let _jobApi = axios.create({
